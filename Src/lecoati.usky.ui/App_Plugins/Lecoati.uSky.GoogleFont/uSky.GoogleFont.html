@@ -1,6 +1,6 @@
 <div ng-controller="uSky.GoogleFont.Controller">
 
-    <div ng-hide="load">Loading google web fonts...</div>
+    <div ng-hide="load">Bezig met laden van google web fonts...</div>
 
     <div class="font-preview" ng-show="load" ng-repeat="node in model.value track by $index">
 
@@ -11,7 +11,7 @@
             </li>
         </ul>
 
-        <input type="text" class="name" placeholder="Enter a name..." ng-model="node.oName">
+        <input type="text" class="name" placeholder="Voer een naam in..." ng-model="node.oName">
 
         <div class="tb mainPanel">
 
@@ -22,13 +22,13 @@
 
                         <div class="tr">
                             <div class="td">
-                                <label>selector:</label>
+                                <label>Div/Selector:</label>
                             </div>
                             <div class="td">
                                 <input type="text" class="size" ng-model="node.oTags" />
                             </div>
                             <div class="td">
-                                <label>GWF:</label>
+                                <label>Font:</label>
                             </div>
                             <div class="td">
                                 <select ng-model="node.oGoogleFont.family" class="size" ng-change="showFontPreview(node, false)" ng-options="font.family as font.family for font in fonts"></select>
@@ -37,7 +37,7 @@
 
                         <div class="tr">
                             <div class="td">
-                                <label>alt font:</label>
+                                <label>Alt. font:</label>
                             </div>
                             <div class="td">
                                 <input type="text" class="size" ng-model="node.oFontFamily" />
@@ -52,13 +52,13 @@
 
                         <div class="tr">
                             <div class="td">
-                                <label>size:</label>
+                                <label>Grootte:</label>
                             </div>
                             <div class="td">
                                 <select ng-model="node.oSize" class="size" ng-options="size for size in sizes"></select>
                             </div>
                             <div class="td">
-                                <label>color:</label>
+                                <label>Kleur:</label>
                             </div>
                             <div class="td">
                                 <div easycolordrawing color="node.oColor"></div>
