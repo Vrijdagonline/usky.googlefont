@@ -70,14 +70,14 @@ angular.module("umbraco")
 			                oTags: $scope.model.config.preDefinedSelectors,
 			                oVariant: "",
 			                oVariants: [],
-			                oSize: "36px",
+			                //oSize: "36px",
 			                oFontFamily: "Arial, sans-serif",
 			                oGoogleFont: {
 			                    family: "-- kies... --",
 			                    variants: {}
 			                },
 			                oColor: { hex: '#555', rgb: 'rgba(85, 85, 85)', rgba: 'rgba(85, 85, 85, 1)', opacity: "1" },
-			                oLineHeight: "36px",
+			                //oLineHeight: "36px",
 			                oTitelVoorMenu: false,
 			                //oLetterSpacing: "14px",
 			                //oWordSpacing: "14px",

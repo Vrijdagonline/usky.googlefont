@@ -27,12 +27,12 @@
                             <div class="td">
                                 <select ng-model="node.oGoogleFont.family" class="size" ng-change="showFontPreview(node, false)" ng-options="font.family as font.family for font in fonts"></select>
                             </div>
-                            <div class="td">
+<!--                             <div class="td">
                                 <label>Div/Selector:</label>
                             </div>
                             <div class="td">
                                 <input disabled type="text" class="size" ng-model="node.oTags" value="{{model.config.preDefinedSelectors}}" />
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="tr">
@@ -42,21 +42,21 @@
                             <div class="td">
                                 <select ng-model="node.oVariant" class="size" ng-change="showFontPreview(node, true)" ng-options="variant for variant in node.oVariants"></select>
                             </div>
-                            <div class="td">
+<!--                             <div class="td">
                                 <label>Alt. font:</label>
                             </div>
                             <div class="td">
                                 <input disabled type="text" class="size" ng-model="node.oFontFamily" />
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="tr">
-                            <div class="td">
+<!--                             <div class="td">
                                 <label>Grootte:</label>
                             </div>
                             <div class="td">
                                 <select ng-model="node.oSize" class="size" ng-options="size for size in sizes"></select>
-                            </div>
+                            </div> -->
                             <div class="td">
                                 <label>Kleur:</label>
                             </div>
@@ -71,12 +71,12 @@
                         </div>-->
 
                         <div class="tr">
-                            <div class="td">
+<!--                             <div class="td">
                                 <label>Line height:</label>
-                            </div>
+                            </div> 
                             <div class="td">
                                 <select ng-model="node.oLineHeight" class="size" ng-options="LineHeight for LineHeight in LineHeights"></select>
-                            </div>
+                            </div>-->
                             <div ng-if="model.config.editorNaam == 'Lettertype voor Titels'">
                                 <div class="td">
                                     <label>Hoofdmenu:</label>
