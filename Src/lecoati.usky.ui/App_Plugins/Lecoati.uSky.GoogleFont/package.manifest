@@ -7,12 +7,34 @@
                 view: "~/App_Plugins/Lecoati.uSky.GoogleFont/uSky.GoogleFont.html",
 				valueType: "JSON",
 				hideLabel: true
-            }
-        }
+            },
+            //our prevalues
+            prevalues: {
+                fields: [ 
+				{
+					//Prevalue Selectors
+					label: "Selectors",
+					description: "Vul de selectors in waar de gekozen font op toegepast moet worden",
+					key: "preDefinedSelectors",
+					view: "textstring",
+					validation: []
+				},
+				{
+					//Prevalue naam
+					label: "Editor Naam",
+					description: "Naam van de editor",
+					key: "editorNaam",
+					view: "textstring",
+					validation: []
+				}
+			]}
+	}
     ],
     javascript: [
 		'~/App_Plugins/Lecoati.uSky.GoogleFont/lib/tinycolor.js',
 		'~/App_Plugins/Lecoati.uSky.GoogleFont/lib/colorpicker.js',
+		//'~/App_Plugins/SpectrumColorPicker/SpectrumColorPicker.controller.js',
+		//'~/App_Plugins/SpectrumColorPicker/lib/spectrum/spectrum.js',
 	    '~/App_Plugins/Lecoati.uSky.GoogleFont/uSky.GoogleFont.controller.js'
     ]
 }

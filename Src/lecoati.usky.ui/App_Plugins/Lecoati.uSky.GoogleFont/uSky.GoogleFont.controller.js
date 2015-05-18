@@ -57,22 +57,28 @@ angular.module("umbraco")
 			            $scope.model.value.oSize = $scope.size;
 			        }
 
+			        $scope.model.value.oTags = $scope.model.config.preDefinedSelectors;
+
+			        // Toon in menu
+			        $scope.model.value.oTitelVoorMenu = $scope.oTitelVoorMenu;
+
 			        //a method to update the model by adding a blank item
 			        $scope.add = function ($index) {
 			            $scope.model.value.splice($index + 1, 0, {
 			                id: new Date().getTime(),
 			                oName: "",
-			                oTags: "body, h1, h2, .strong...",
+			                oTags: $scope.model.config.preDefinedSelectors,
 			                oVariant: "",
 			                oVariants: [],
 			                oSize: "36px",
 			                oFontFamily: "Arial, sans-serif",
 			                oGoogleFont: {
-			                    family: "-- none --",
+			                    family: "-- kies... --",
 			                    variants: {}
 			                },
 			                oColor: { hex: '#555', rgb: 'rgba(85, 85, 85)', rgba: 'rgba(85, 85, 85, 1)', opacity: "1" },
 			                oLineHeight: "36px",
+			                oTitelVoorMenu: false,
 			                //oLetterSpacing: "14px",
 			                //oWordSpacing: "14px",
 			                //oWeight: "14px"
@@ -100,7 +106,7 @@ angular.module("umbraco")
 			            if (!init) {
 			                node.oVariant = "";
 			                node.oVariants = [];
-			                if (node.oGoogleFont.family != "-- none --") {
+			                if (node.oGoogleFont.family != "-- kies... --") {
 			                    angular.forEach($scope.fonts, function (value, key) {
 			                        if (value.family == node.oGoogleFont.family) {
 			                            node.oVariants = value.variants;
@@ -111,7 +117,7 @@ angular.module("umbraco")
 			                }
 			            }
 
-			            if (node.oGoogleFont.family != "-- none --") {
+			            if (node.oGoogleFont.family != "-- kies... --") {
 
 			                //Google WebFont JS loader...
 			                WebFont.load({
@@ -147,7 +153,7 @@ angular.module("umbraco")
 			            $http.get('/Umbraco/Api/GoogleFont/load')
                             .success(function (data) {
                                 $scope.fonts.push({
-                                    family: "-- none --",
+                                    family: "-- kies... --",
                                     variants: {}
                                 });
                                 angular.forEach(data.items, function (value, key) {
